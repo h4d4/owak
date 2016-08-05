@@ -1,0 +1,275 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+.center {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+body {
+  background-color: rgba(0,0,0,0.35);
+}
+
+@font-face {
+  font-family: 'Brandon_blk';
+  src: url('/assets/fonts/Brandon_blk.otf');
+}
+
+#header .header-image {
+  position: absolute;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 10px;
+}
+
+#share {
+  width: '100%';
+  box-shadow: 0 5px 5px -5px #333;
+}
+
+#share > input {
+  font-size: 100%;
+  width: 80%;
+  float: left;
+  border: 0px solid;
+  height: 100px;
+  margin: 0;
+  padding: 0;
+  padding-left: 2%;
+  background-color: #cccccc;
+  color: rgba(0,0,0,0.80);
+}
+
+#share > button {
+  font-family: 'Brandon_blk';
+  font-size: 100%;
+  color: white;
+  float: right;
+  display: block;
+  width: 18%;
+  background-color: #f05c28;
+  height: 100px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+
+#main {
+  display: inline-block;
+  color: white;
+}
+
+
+#header .header-image > img {
+  width: 100%;
+}
+
+#header .header-title {
+  font-family: 'Brandon_blk';
+  font-size: 31.7pt;
+  color: white;
+  width: 40%;
+  position: relative;
+  padding-top: 30%;
+}
+
+
+.aqua-color {
+  color: #00d2b0;
+}
+
+.logo > a img {
+  width: 40%;
+  margin: 7%;
+}
+
+.logo {
+  position: absolute;
+  z-index: 10;
+}
+
+#box
+{
+  width: 310px;
+  height: 310px;
+  padding: 0 0 0 0;
+  float: left;
+  overflow: hidden;
+  margin-left: 7%;
+  margin-bottom: 5%;
+  background-color: rgba(0,0,0,.35);
+}
+
+#overlay {
+  width:270px;
+  height:269px;
+  background:rgba(0,0,0,.75);
+  text-align:left;
+  padding:0 0 0 0;
+  opacity:0;
+  border-top:15px solid #00d2b0;
+  border-right:15px solid #00d2b0;
+  border-bottom:15px solid #00d2b0;
+  border-left:15px solid #00d2b0;
+  -webkit-transition: opacity .25s ease;
+  -moz-transition: opacity .25s ease;
+}
+
+#overlay > span {
+  margin: 0;
+  padding: 0;
+}
+
+#overlay2 {
+  width:285px;
+  height:269px;
+  background:rgba(0,0,0,.75);
+  text-align:left;
+  padding:0 0 0 0;
+  opacity:0;
+  -webkit-transition: opacity .25s ease;
+  -moz-transition: opacity .25s ease;
+}
+
+#box:hover #overlay {
+  opacity:1;
+}
+
+#close {
+  font-family:'helvetica';
+  color:rgba(255,255,255,.85);
+  font-size:30px;
+  cursor:pointer;
+  padding: 0px 20px 0px 255px;
+  float: right;
+}
+
+#title {
+  font-family: 'Brandon_blk';
+  color: white;
+  font-size: 30px;
+  float: left;
+  margin-top: 50%;
+  padding: 7%;
+  width: 60%;
+}
+
+#play {
+  font-family:'Helvetica';
+  color:rgba(255,255,255,.85);
+  font-size:30px;
+  text-align:right;
+  padding: 0px 15px 0px 10px;
+}
+
+.overaqua1  {
+  background:#00d2b0;
+  text-align:center;
+  padding: 20px 20px 100px 20px;
+  opacity:1;
+  -webkit-transition: opacity .25s ease;
+  -moz-transition: opacity .25s ease;
+}
+
+
+
+@media screen and (max-width: 1680px) {
+  #share > input {
+    width: 88%;
+  }
+
+  #share > button {
+    width: 10%;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  #share > input {
+    width: 88%;
+  }
+
+  #share > button {
+    width: 10%;
+  }
+
+  #header .header-title {
+    font-size: 28pt;
+    width: 50%;
+    padding-top: 40%;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  #share > input {
+    width: 88%;
+  }
+
+  #share > button {
+    width: 10%;
+  }
+  #header .header-title {
+    font-size: 20pt;
+    width: 45%;
+    padding-top: 40%;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  #share > input {
+    width: 80%;
+  }
+
+  #share > button {
+    width: 18%;
+  }
+
+  #header .header-title {
+    font-size: 18pt;
+    width: 50%;
+    padding-top: 40%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #share > input {
+    width: 80%;
+  }
+
+  #share > button {
+    width: 18%;
+  }
+
+  #header .header-title {
+    font-size: 15pt;
+    width: 70%;
+    padding-top: 40%;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  #share > input {
+    width: 80%;
+  }
+
+  #share > button {
+    width: 18%;
+  }
+
+  #header .header-title {
+    font-size: 13pt;
+    width: 70%;
+    padding-top: 40%;
+  }
+}
+

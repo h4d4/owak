@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <title> OWAK </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+  </head>
+  <body onload = "getList()">
+
+    <div id="wrapper">
+      <div id="header">
+        <div class="logo">
+          <a href="#">
+            <img src="/assets/images/logo.png" alt="">
+          </a>
+        </div>
+
+        <div class="header-image">
+          <img class="center" src="/assets/images/featured.jpg"> </img>
+          <div id="share">
+            <input type="text" placeholder="Paste a Youtube or Spotify URL"> <button> SHARE </button>
+          </div>
+
+          <div id="main">
+
+          </div>
+        </div>
+        <div class="header-title center">
+          SHARE ONE PLAYLIST WITH <span class="aqua-color">ALL YOUR FRIENDS<span>
+        </div>
+
+      </div>
+
+
+    </div>
+
+    <script type="text/javascript">
+      function getList () {
+        var xmlhttp = new XMLHttpRequest();
+        var url = "/assets/feed.json";
+
+        xmlhttp.onreadystatechange = function() {
+          if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            var myArr = JSON.parse(xmlhttp.responseText);
+            fetch(myArr);
+          }
+        };
+
+        xmlhttp.open("GET", url, true);
+        xmlhttp.send();
+
+        function fetch (arr) {
+          for (var i = 0; i < arr.length; ++i) {
+            var cur = arr[i];
+            console.log(cur.image)
+            addSong(cur.artist, cur.image, cur.link, cur.song);
+          }
+        }
+      }
+
+      function addSong (artist, image, link, song) {
+        image = '/assets/images/' + image;
+
+        var main  = document.getElementById('main');
+        var div = document.createElement('div');
+        div.setAttribute('id', 'box');
+        div.style.backgroundImage = 'url(' + image + ')';
+        div.style.width = '300px';
+        div.style.height = '299px';
+        div.style.display = 'inline-block';
+
+        var div2 = document.createElement('div');
+        div2.setAttribute('id', 'overlay');
+        var span = document.createElement('span');
+        span.setAttribute('id', 'close');
+        span.style.marginRight ='7px';
+        span.innerHTML = "x";
+        span.onclick = function () {
+          var tmp = this.parentNode.parentNode;
+          tmp.parentNode.removeChild(tmp);
+        };
+
+        var span2 = document.createElement('span');
+        span2.setAttribute('id', 'title');
+        span2.innerHTML = song;
+        div.appendChild(span2);
+
+        div2.appendChild(span);
+        div.appendChild(div2);
+        main.appendChild(div);
+      }
+
+      var init_pos = -1;
+      window.onscroll = function () {
+        var input = document.getElementById('share');
+        if (init_pos < 0) init_pos = get_pos_y(input);
+
+        if (pageYOffset > init_pos) {
+          input.style.position = 'fixed';
+          input.style.top = 0;
+          input.style.width = '100%';
+        }
+        else {
+          input.style.position = 'relative';
+          input.style.width = '100%';
+        }
+      };
+
+      function get_pos_y (obj) {
+        var curtop = 0;
+        if (typeof (obj.offsetParent) != 'undefined' && obj.offsetParent) {
+          while (obj.offsetParent) {
+            curtop += obj.offsetTop;
+            obj = obj.offsetParent;
+          }
+          curtop += obj.offsetTop;
+        }
+        else if (obj.y)
+          curtop += obj.y;
+        return curtop;
+      }
+    </script>
+  </body>
+</html>

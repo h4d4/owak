@@ -1,0 +1,61 @@
+[{
+  "song":"A Real Hero",
+  "artist": "College & Electric Youth",
+  "link": "https://www.youtube.com/watch?v=-DSVDcw6iW8",
+  "image": ""
+},{
+  "song":"Rolling in the Deep",
+  "artist": "Adelle",
+  "link": "https://www.youtube.com/watch?v=rYEDA3JcQqw",
+  "image": "rolling-in-the-deep.jpg"
+},{
+  "song":"THUNDERSTUCK",
+  "artist": "AC/DC",
+  "link": "https://www.youtube.com/watch?v=v2AC41dglnM",
+  "image": ""
+},{
+  "song":"El carpintero del amor",
+  "artist": "Andrés Cepeda",
+  "link": "https://www.youtube.com/watch?v=ugsO-JBeoGg",
+  "image": "carpintero.jpg"
+},{
+  "song":"Bajan",
+  "artist": "Gustavo Cerati",
+  "link": "https://www.youtube.com/watch?v=Q8lkduDJljk",
+  "image": "bajan.jpg"
+},{
+  "song":"El Mareo",
+  "artist": "Bajofondo, Gustavo Cerati",
+  "link": "https://www.youtube.com/watch?v=0O2QQ3NMa54",
+  "image": ""
+},{
+  "song":"Yesterday",
+  "artist": "The Beatles",
+  "link": "https://www.youtube.com/watch?v=Ho2e0zvGEWE",
+  "image": "yesterday.jpg"
+},{
+  "song":"This Ain't a love song",
+  "artist": "Bon Jovi",
+  "link": "https://www.youtube.com/watch?v=-nlDy6h-v9c",
+  "image": "this-aint-a-love-song.jpg"
+},{
+  "song":"Wake Me Up",
+  "artist": "Avicci",
+  "link": "https://www.youtube.com/watch?v=IcrbM1l_BoI",
+  "image": ""
+},{
+  "song":"Simetria",
+  "artist": "Ases Falsos",
+  "link": "https://www.youtube.com/watch?v=hH1-Mi5t4lM",
+  "image": ""
+},{
+  "song":"Ojos Color Sol",
+  "artist": "Calle 13, Silvio Rodriguez",
+  "link": "https://www.youtube.com/watch?v=1Nr_tqkMsJs",
+  "image": ""
+},{
+  "song":"La Gota Fria",
+  "artist": "Carlos Vives",
+  "link": "https://www.youtube.com/watch?v=Nmb80HXWsFQ",
+  "image": ""
+}]
